@@ -1,2 +1,2 @@
-# Trojan.js
-Repositoryul unde va lua nastere botul de Discord al Echipei Trojan.exe
+# Site-ul Trojan.EXE
+Repository-ul unde va lua nastere noul site al echipei Trojan.exe.
