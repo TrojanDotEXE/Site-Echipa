@@ -1,0 +1,33 @@
+TODO: Fisierul cu setari
+TODO: Comand Palette
+TODO: Extensii:
+        Prettier
+        Live Share
+        Indent-Rainbow
+        DotENV
+        GitLens
+        Bracket Pair Colorizer
+        Better Comments
+        Material Icon Theme
+        Atom One Dark
+TODO: Setari si settings.json
+TODO: Shortcuts 
+        Meniuri 
+            fisiere din proiect         - ctrl + P
+            comand palette              - ctrl + shift + P sau F1
+            search                      - ctrl + shift + F
+            file explorer               - ctrl + shift + E
+            source control              - ctrl + shift + G
+            extensii                    - ctrl + shift + X
+            deschide terminal           - ctrl + `
+        Fisier
+            inchide fisier              - ctrl + W
+            salveaza fisier             - ctrl + S
+            creeaza fisier              - ctrl + N
+        Editor
+            selecteaza cuvant           - ctrl + D
+            muta linie                  - alt + sageata sus/jos
+            copiaza linie sub/deasupra  - alt + shift + sageata sus/jos
+            adauga cursor               - ctrl + alt + sageata sus/jos
+
+TODO: Snippets

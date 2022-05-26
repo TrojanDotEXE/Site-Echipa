@@ -1,0 +1,78 @@
+@import "config";
+
+body {
+  background: $primary-color;
+  color: $white;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+
+  .social-icons {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  a {
+    padding: 0.4rem;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  padding: 1rem;
+  color: $white;
+  background: #222;
+  width: 100vw;
+
+  h4 {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+
+  p {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  a {
+    margin-right: 8px;
+  }
+
+  .footer-text {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+  }
+
+  .social-icons {
+    position: absolute;
+    bottom: 50%;
+    right: 10%;
+  }
+}

@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #080808;
+  color: #e6e6e6;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+}
+
+a {
+  color: #e6e6e6;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+main .social-icons {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+main a {
+  padding: 0.4rem;
+}
+
+main a:hover {
+  color: #ff8000;
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  padding: 1rem;
+  color: #e6e6e6;
+  background: #222;
+  width: 100vw;
+}
+
+footer h4 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+footer p {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+footer a {
+  margin-right: 8px;
+}
+
+footer .footer-text {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  margin-left: 2rem;
+}
+
+footer .social-icons {
+  position: absolute;
+  bottom: 50%;
+  right: 10%;
+}
+/*# sourceMappingURL=style.css.map */
