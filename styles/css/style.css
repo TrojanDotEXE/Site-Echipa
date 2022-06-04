@@ -1,3 +1,7 @@
+:root {
+  --nav-height: 0;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,22 +10,52 @@
 
 body {
   background: #080808;
-  color: #e6e6e6;
-  height: 100vh;
+  color: white;
+  min-height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
 }
 
 a {
-  color: #e6e6e6;
+  color: white;
   text-decoration: none;
 }
 
-header {
-  position: fixed;
+.link {
+  margin: 0.4rem;
+}
+
+.link:hover {
+  color: #ff8000;
+}
+
+.header {
+  position: sticky;
+  top: 0;
   z-index: 2;
   width: 100%;
   padding: 1rem;
+  background-color: rgba(12, 12, 12, 0.85);
+}
+
+.header--hidden {
+  transform: translateY(var(--nav-height));
+}
+
+.header .nav__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.header .nav__list-item {
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+}
+
+.header .nav__link {
+  margin: 0;
 }
 
 main {
@@ -29,55 +63,46 @@ main {
   width: 100%;
 }
 
-main .social-icons {
-  position: fixed;
-  bottom: 1rem;
-  left: 1rem;
-}
-
-main a {
-  padding: 0.4rem;
-}
-
-main a:hover {
-  color: #ff8000;
+main .img-cover {
+  position: relative;
+  max-height: 2000px;
 }
 
 footer {
-  font-size: 1rem;
-  position: fixed;
-  bottom: 0;
+  position: relative;
   left: 0;
-  text-align: left;
-  padding: 1rem;
-  color: #e6e6e6;
-  background: #222;
+  bottom: 0;
   width: 100vw;
+  max-width: 100%;
+  padding: 1rem;
+  text-align: left;
+  color: white;
+  background: #222;
 }
 
-footer h4 {
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-}
-
-footer p {
-  margin-top: 0.8rem;
-  margin-bottom: 0.8rem;
-}
-
-footer a {
-  margin-right: 8px;
-}
-
-footer .footer-text {
+footer .footer-description {
   margin-top: 2rem;
   margin-bottom: 3rem;
   margin-left: 2rem;
 }
 
-footer .social-icons {
+footer .footer__title {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+footer .footer__text {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+footer .footer__icons {
   position: absolute;
-  bottom: 50%;
+  bottom: 45%;
   right: 10%;
+}
+
+footer .link i:hover {
+  transform: scale(1.5, 1.5);
 }
 /*# sourceMappingURL=style.css.map */
