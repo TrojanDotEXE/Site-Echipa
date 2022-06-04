@@ -1,15 +1,19 @@
 @import "config";
+@import "header";
+@import "main";
+@import "footer";
 
 body {
-  background: $primary-color;
-  color: white;
+  background: $black1;
+  color: $white1;
   min-height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
+  overflow-x: hidden;
 }
 
 a {
-  color: white;
+  color: $white1;
   text-decoration: none;
 }
 
@@ -17,89 +21,11 @@ a {
   margin: 0.4rem;
 
   &:hover {
-    color: $secondary-color;
+    color: $secondary;
   }
 }
 
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  width: 100%;
-  padding: 1rem;
-  background-color: rgba(12, 12, 12, 0.85);
 
-  &--hidden {
-    transform: translateY(var(--nav-height));
-  }
 
-  .nav {
-    &__list {
-      list-style-type: none;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-    }
 
-    &__list-item {
-      margin-left: 0.4rem;
-      margin-right: 0.4rem;
-    }
 
-    &__link {
-      margin: 0;
-    }
-  }
-}
-
-main {
-  height: 100%;
-  width: 100%;
-
-  .img-cover {
-    position: relative;
-    max-height: 2000px;
-  }
-}
-
-footer {
-  position: relative;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  max-width: 100%;
-
-  padding: 1rem;
-
-  text-align: left;
-  color: white;
-  background: #222;
-
-  .footer {
-    &-description {
-      margin-top: 2rem;
-      margin-bottom: 3rem;
-      margin-left: 2rem;
-    }
-
-    &__title {
-      margin-bottom: 1.5rem;
-      font-weight: 700;
-    }
-
-    &__text {
-      margin-top: 0.8rem;
-      margin-bottom: 0.8rem;
-    }
-
-    &__icons {
-      position: absolute;
-      bottom: 45%;
-      right: 10%;
-    }
-  }
-
-  .link i:hover {
-    transform: scale(1.5, 1.5);
-  }
-}

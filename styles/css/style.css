@@ -8,64 +8,63 @@
   padding: 0;
 }
 
-body {
-  background: #080808;
-  color: white;
-  min-height: 100vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-.link {
-  margin: 0.4rem;
-}
-
-.link:hover {
-  color: #ff8000;
-}
-
 .header {
   position: sticky;
   top: 0;
   z-index: 2;
   width: 100%;
   padding: 1rem;
-  background-color: rgba(12, 12, 12, 0.85);
+  background-color: rgba(8, 8, 8, 0.85);
+  transition: transform, 350ms;
+  transition-timing-function: ease-out;
 }
 
 .header--hidden {
   transform: translateY(var(--nav-height));
 }
 
-.header .nav__list {
-  list-style-type: none;
+.header .nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.header .nav__list-item {
-  margin-left: 0.4rem;
-  margin-right: 0.4rem;
-}
-
-.header .nav__link {
-  margin: 0;
-}
-
-main {
+.main {
   height: 100%;
   width: 100%;
+  display: grid;
+  grid-auto-flow: row;
+  align-items: center;
+  align-content: center;
 }
 
-main .img-cover {
+@media (min-width: 55em) {
+  .main {
+    grid-auto-flow: column;
+  }
+}
+
+.main h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.main .section {
+  margin: 2rem;
+  display: grid;
+  gap: 1.5rem;
+  align-content: center;
+  justify-content: flex-start;
+  max-width: 80%;
+  height: auto;
+}
+
+.main .img-cover {
   position: relative;
-  max-height: 2000px;
+  width: auto;
+  max-height: 100vh;
+  margin: 2rem;
 }
 
 footer {
@@ -75,9 +74,9 @@ footer {
   width: 100vw;
   max-width: 100%;
   padding: 1rem;
+  background: rgba(8, 8, 8, 0.85);
+  color: #e6e6e6;
   text-align: left;
-  color: white;
-  background: #222;
 }
 
 footer .footer-description {
@@ -104,5 +103,27 @@ footer .footer__icons {
 
 footer .link i:hover {
   transform: scale(1.5, 1.5);
+}
+
+body {
+  background: #030303;
+  color: #e6e6e6;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+a {
+  color: #e6e6e6;
+  text-decoration: none;
+}
+
+.link {
+  margin: 0.4rem;
+}
+
+.link:hover {
+  color: #ff8000;
 }
 /*# sourceMappingURL=style.css.map */
