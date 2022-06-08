@@ -15,6 +15,74 @@
   .nav {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .team-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+  }
+
+  .nav-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+     &  li{
+       list-style: none;
+       margin-right: .4rem;
+     }
+  }
+
+  .toggle-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+  
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 30px;
+    height: 21px;
+    margin: .4rem;
+    .bar {
+      height: 3px;
+      width: 100%;
+      border-radius: 10px;
+
+      background-color: $white1;
+    }
+  }
+
+  @media (max-width: 50rem) {  
+    .toggle-button {
+      display: flex;
+    }
+  
+    .nav-links {
+      width: 100%;
+      display: none;
+  
+      & ul {
+        width: 100%;
+        flex-direction: column;
+      }
+  
+      & li {
+        text-align: center;
+      }
+
+      &.active {
+        display: flex;
+      }
+    }
+  
+    .nav {
+      flex-direction: column;
+      align-items: start;
+    }
   }
 }
+

@@ -12,14 +12,8 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  color: $white1;
-  text-decoration: none;
-}
-
 .link {
-  margin: 0.4rem;
-
+  padding: .4rem;
   &:hover {
     color: $secondary;
   }
