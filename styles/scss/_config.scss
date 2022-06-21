@@ -1,5 +1,5 @@
-$black1:      hsl(0, 0%, 1%);
-$black2:      hsla(0, 0%, 3%, 0.85);
+$black1:      hsl(0, 0%, 0%);
+$black2:      hsla(0, 0%, 0.2%, 0.85);
 $white1:      hsl(0, 0%, 90%);
 $secondary:   hsl(30, 100%, 50%);
 
@@ -9,9 +9,6 @@ $secondary:   hsl(30, 100%, 50%);
 
 * {
   box-sizing: border-box;
-}
-
-body {
   margin: 0;
   padding: 0;
 }

@@ -4,9 +4,6 @@
 
 * {
   box-sizing: border-box;
-}
-
-body {
   margin: 0;
   padding: 0;
 }
@@ -22,7 +19,7 @@ a {
   z-index: 2;
   width: 100%;
   padding: 1rem;
-  background-color: rgba(8, 8, 8, 0.85);
+  background-color: rgba(1, 1, 1, 0.85);
   transition: transform, 350ms;
   transition-timing-function: ease-out;
 }
@@ -131,7 +128,7 @@ a {
   height: auto;
 }
 
-.main .section h2 {
+.main .section .main__title {
   font-size: clamp(2rem, 3.5vw, 3rem);
   text-align: center;
   margin-bottom: 2rem;
@@ -144,6 +141,192 @@ a {
   height: auto;
 }
 
+.main--podcast {
+  display: flex;
+  flex-direction: column;
+}
+
+.main--podcast .heading {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  background-image: url(../../assets/Podcast.jpg);
+  background-size: cover;
+}
+
+.main--podcast .heading .description {
+  width: 80%;
+  position: relative;
+  top: 40%;
+  left: 2rem;
+}
+
+@media (min-width: 550px) {
+  .main--podcast .heading .description {
+    left: 5rem;
+  }
+}
+
+.page-title {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.page-description {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.season-header {
+  font-size: clamp(2.3rem, 5vw, 3.3rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.main__episodes {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: start;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.main__episodes .episode {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 1100px) {
+  .main__episodes .episode {
+    align-items: center;
+  }
+}
+
+.main__episodes .episode__container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.main__episodes .episode__thumbnail {
+  height: auto;
+  width: clamp(6rem, 15vw, 12rem);
+  margin-left: clamp(1.5rem, 3vw, 3rem);
+  margin-right: 1rem;
+}
+
+.main__episodes .episode__title {
+  font-weight: 700;
+  font-size: clamp(1rem, 5vw, 3rem);
+  margin-bottom: 2rem;
+}
+
+.main__episodes .episode__description {
+  font-size: clamp(0.6rem, 2vw, 1rem);
+}
+
+.main--contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 950px) {
+  .main--contact {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 950px) {
+  .contact {
+    justify-items: center;
+  }
+}
+
+.contact__title {
+  font-size: clamp(2.5rem, 10vw, 4rem);
+  margin-bottom: 2rem;
+}
+
+.contact__addresses {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact__addresses__collumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (max-width: 950px) {
+  .contact__addresses__collumn {
+    align-items: center;
+  }
+}
+
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  height: calc(15vw + 20vh);
+  width: calc(25vw + 5vh);
+}
+
+.contact__link {
+  height: clamp(9rem, 100%, 10rem);
+  width: clamp(12rem, 100%, 28rem);
+  outline: 2px solid #e6e6e6;
+  transition-property: outline-offset;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+}
+
+.contact__link:hover {
+  outline-offset: 4px;
+}
+
+.contact__link:nth-child(1) {
+  background-image: radial-gradient(circle at 0% 150%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.contact__link:nth-child(2) {
+  background-color: #1876f2;
+}
+
+.contact__link:nth-child(3) {
+  background-color: red;
+}
+
+.contact__link__bg {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+}
+
+.contact__link__bg:hover {
+  background-color: transparent;
+}
+
+.contact .img-cover--motto {
+  height: clamp(30vw, 70vw, 30rem);
+  width: auto;
+}
+
 footer {
   position: relative;
   left: 0;
@@ -151,7 +334,7 @@ footer {
   width: 100vw;
   max-width: 100%;
   padding: 1rem;
-  background: rgba(8, 8, 8, 0.85);
+  background: rgba(1, 1, 1, 0.85);
   color: #e6e6e6;
   text-align: left;
   display: flex;
@@ -192,7 +375,7 @@ footer .link i:hover {
 }
 
 body {
-  background: #030303;
+  background: black;
   color: #e6e6e6;
   min-height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
