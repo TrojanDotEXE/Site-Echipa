@@ -327,6 +327,95 @@ a {
   width: auto;
 }
 
+.main--sponsors {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.sponsors__heading {
+  display: flex;
+  align-content: space-between;
+  gap: 2rem;
+  margin-bottom: 8rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+@media (max-width: 1230px) {
+  .sponsors__heading {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.sponsors__title {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  text-align: left;
+}
+
+@media (max-width: 1230px) {
+  .sponsors__title {
+    text-align: center;
+  }
+}
+
+.sponsors__donation {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  text-align: left;
+}
+
+@media (max-width: 1230px) {
+  .sponsors__donation {
+    text-align: center;
+  }
+}
+
+.sponsors__article {
+  width: 90vw;
+  height: auto;
+}
+
+.sponsors__image {
+  width: 100%;
+  height: auto;
+}
+
+.sponsors__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  column-gap: 2rem;
+  margin-top: 4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.sponsors__sponsor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sponsor__image {
+  width: clamp(15rem, 21vw, 20rem);
+  height: auto;
+}
+
+.sponsor__description {
+  font-size: clamp(0.5rem, 2vw, 1rem);
+  line-height: normal;
+}
+
+@media (max-width: 774px) {
+  .sponsor__description {
+    text-align: center;
+  }
+}
+
 footer {
   position: relative;
   left: 0;
