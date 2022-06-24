@@ -3,9 +3,23 @@ $black2:      hsla(0, 0%, 0.2%, 0.85);
 $white1:      hsl(0, 0%, 90%);
 $secondary:   hsl(30, 100%, 50%);
 
+$gradient-white: radial-gradient(circle at 30% 150%,
+#fff 0%, #fff 100%
+);
+
+$gradient-main: radial-gradient(circle at 30% 150%,
+#8A2387 0%, #8A2387 33%,
+#E94057 66%, #F27121 100%,
+);
+
+$gradient-main-reverse: radial-gradient(circle at 40% 150%,
+#F27121 0%,  #F27121 33%,
+#E94057 66%, #8A2387 100%,
+);
+
 :root {
   --nav-height: 0;
-}
+} 
 
 * {
   box-sizing: border-box;
@@ -13,7 +27,40 @@ $secondary:   hsl(30, 100%, 50%);
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: $white1;
   text-decoration: none;
+}
+
+//Reset classes
+
+.invisible {
+  opacity: 0;
+
+  &--bg {
+    background-color: transparent!important;
+  }
+
+  &--color {
+    color: transparent!important;
+  }
+
+  &--shadow {
+    box-shadow: none!important;
+  }
+}
+
+.cursor-- {
+
+  &default, &default:hover {
+    cursor: default!important;
+  }
+
+  &pointer, &pointer:hover {
+    cursor: pointer!important;
+  }
 }
