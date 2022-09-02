@@ -8,6 +8,7 @@
     height: 80vh;
     background-image: url(../../assets/Podcast.jpg);
     background-size: cover;
+    z-index: -2;
 
     .description {
       width : 80%;
@@ -26,18 +27,17 @@
   &title {
     font-size: clamp(2.5rem, 6vw, 3.5rem);
     font-weight: 700;
-    // font-family: ;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-
-    &:hover {
-      
-    }
+    width: fit-content;
+    padding: 1rem;
+    
   }
   &description {
     font-size: clamp(1rem, 3vw, 1.5rem);
     font-weight: 700;
     text-transform: uppercase;
+    width: fit-content;
+    background-color:hsla(0, 0%, 0.2%, 0.45);
+    padding: 1rem;
   }
 }
 
@@ -59,9 +59,10 @@
   .episode {
     display: flex;
     flex-direction: row-reverse;
-    @media(max-width: 1100px) {
-      align-items: center;
-    }
+    align-items: flex-start;
+    // @media(max-width: 1100px) {
+    //   align-items: center;
+    // }
 
     &__container {
       padding-left: 1rem;

@@ -1,0 +1,208 @@
+.main--team {
+  .heading {
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 72px; left: 0;
+    width: 100%;
+    height: calc(100% + var(--nav-height));
+    background-image: url("../../assets/Poza echipa.jpg");
+    background-size: cover;
+    filter: blur(3px) brightness(60%);
+    z-index: -2;
+  }
+}
+
+.page-title--team {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-weight: 700;
+    // font-family: ;
+    padding-top: 8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    &:hover {
+      
+    }
+  }
+
+.page-description--team {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.list__title {
+  font-size: clamp(2.3rem, 5vw, 3.3rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card-list {
+  display: flex;
+  padding: 3rem;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $secondary3;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px $secondary2, inset -2px -2px 2px $secondary3;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: $black3;
+  }
+}
+
+.card {
+  height: 490px;
+  width: 360px;
+  min-height: 340px;
+  min-width: 310px;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: $black3;
+  box-shadow: -1rem 0 3rem #000;
+  display: flex;
+  flex-direction: column;
+  transition: .2s;
+  margin: 0;
+  scroll-snap-align: start;
+  clear: both;
+  position: relative;
+
+  &:focus-within~&, &:hover~& {
+    transform: translateX(130px);
+  }
+
+  &:hover {
+    transform: translateY(-1rem);
+  }
+
+  &:not(:first-child) {
+    margin-left: -130px;
+  }
+}
+
+.card-header {
+  margin-bottom: auto;
+
+  & p {
+    font-size: 14px;
+    margin: 0 0 1rem;
+    color: $gray;
+  }
+  
+  & h2 {
+    font-size: 20px;
+    margin: .25rem ;
+    text-decoration: none;
+    color: inherit;
+    border: 0;
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+.card-header--hover {
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.card-author {
+  margin: 1rem 0 0;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  grid-column-gap: 3rem;
+  align-items: center;
+  position: relative;
+}
+
+.author-avatar {
+  grid-area: auto;
+  align-self: start;
+  position: relative;
+  box-sizing: border-box;
+
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: block;
+  overflow: hidden;
+  margin: 16px 10px;
+}
+
+.author-name {
+  grid-area: auto;
+  box-sizing: border-box;
+  font-size: 20px;
+
+  &-prefix {
+    font-style: normal;
+    font-weight: 700;
+    color: $gray;
+  }
+}
+
+.half-circle {
+  position: absolute;
+  bottom: 10px;
+  left: -195px;
+  width: 500px;
+  height: 52px;
+  fill: none;
+  stroke: $secondary;
+  stroke-width: 8;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+.tags {
+  margin: 0 0 2rem;
+  padding: .5rem 0 1rem;
+  line-height: 2;
+  margin-bottom: 0;
+
+  a {
+    font-style: normal;
+    font-weight: 700;
+    font-size: .5rem;
+    color: $gray;
+    text-transform: uppercase;
+    font-size: .66rem;
+    border: 3px solid $gray2  ;
+    border-radius: 2rem;
+    padding: .2rem .85rem .25rem;
+    position: relative;
+  }
+
+  a:hover {
+    background: linear-gradient(90deg,$secondary,#e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    background-clip: text;
+    border-color: white;
+  }
+}
+
+
+
