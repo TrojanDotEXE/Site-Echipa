@@ -429,6 +429,7 @@ footer .link i:hover {
   text-transform: uppercase;
   width: fit-content;
   background-image: radial-gradient(circle at 30% 150%, #8A2387 0%, #8A2387 33%, #E94057 66%, #F27121 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: text-shadow 250ms ease;
@@ -448,6 +449,7 @@ footer .link i:hover {
   text-transform: uppercase;
   width: fit-content;
   background-image: radial-gradient(circle at 30% 150%, #8A2387 0%, #8A2387 33%, #E94057 66%, #F27121 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: text-shadow 250ms ease;
@@ -474,6 +476,7 @@ footer .link i:hover {
   text-transform: uppercase;
   width: fit-content;
   background-image: radial-gradient(circle at 30% 150%, #8A2387 0%, #8A2387 33%, #E94057 66%, #F27121 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: text-shadow 250ms ease;
@@ -493,6 +496,7 @@ footer .link i:hover {
   text-transform: uppercase;
   width: fit-content;
   background-image: radial-gradient(circle at 30% 150%, #8A2387 0%, #8A2387 33%, #E94057 66%, #F27121 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: text-shadow 250ms ease;
@@ -527,7 +531,7 @@ footer .link i:hover {
   text-transform: uppercase;
   width: fit-content;
   background-image: radial-gradient(circle at 30% 150%, #8A2387 0%, #8A2387 33%, #E94057 66%, #F27121 100%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: text-shadow 250ms ease;
   margin: 8rem auto 2rem;
@@ -583,6 +587,7 @@ footer .link i:hover {
   text-transform: uppercase;
   width: fit-content;
   background-image: radial-gradient(circle at 30% 150%, #8A2387 0%, #8A2387 33%, #E94057 66%, #F27121 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: text-shadow 250ms ease;
@@ -602,6 +607,7 @@ footer .link i:hover {
   text-transform: uppercase;
   width: fit-content;
   background-image: radial-gradient(circle at 30% 150%, #8A2387 0%, #8A2387 33%, #E94057 66%, #F27121 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: text-shadow 250ms ease;
