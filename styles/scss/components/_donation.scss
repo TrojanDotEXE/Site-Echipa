@@ -1,0 +1,61 @@
+@import '../utils/index';
+
+.donation {
+  @include flex(row, 2rem, center, center, space-around);
+  @include margins(0, 2rem, 1.7rem);
+  
+  @media (max-width: 800px) {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+.donation__ {
+  &container {
+    @include flex(column, 2rem);
+    width: fit-content;
+
+    @media (max-width: 800px) {
+      width: 60vw;
+    }
+  }
+  
+  &title {
+    @include description(2rem, 6vw, 3.5rem, center);
+  }
+  
+  &description {
+    @include description(.9rem, 2vw, 1.3rem, center, 500);
+  }
+
+  &details {
+    @include flex(column, 1rem, start);
+    width: 35%;
+    height: auto;
+
+    padding: 2rem;
+    border: 2px solid $white1;
+    background-color: $secondary;
+
+    transition: box-shadow 350ms ease-out;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 1px 0 15px 3px $secondary;
+    }
+
+    @media (max-width: 800px) {
+      width: 60vw;
+    }
+  }
+
+  &detail {
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+
+  &icon {
+    position: absolute;
+    align-self: center;
+  }
+}

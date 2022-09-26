@@ -1,0 +1,137 @@
+@import '../utils/index';
+
+@mixin mainGrid ($padding: 0rem) {
+  height: 100%;
+  width: 100%;
+  padding: $padding;
+  @include grid();
+}
+
+@mixin mainFlex ($padding: 0rem) {
+  height: 100%;
+  width: 100%;
+  padding: $padding;
+  @include flex();
+}
+
+@mixin mainFlex ($padding:0rem, $flex-dir:row, $gap:0rem,
+$algn-i:center, $algn-c:center, 
+$just-c:center){
+  height: 100%;
+  width: 100%;
+  padding: $padding;
+  @include flex($flex-dir, $gap, $algn-i, $algn-c, $just-c);
+} 
+
+@mixin mainGrid ($padding: 0rem, $grid-dir:row, $gap:0rem,
+$algn-i:center, $algn-c:center, 
+$just-i:center, $just-c:center) {
+  height: 100%;
+  width: 100%;
+  padding: $padding;
+  @include grid($grid-dir, $gap, $algn-i, $algn-c, $just-i, $just-c);
+}
+
+.main {
+  &--index {
+    @include mainGrid(3rem, row, 0rem, center, center, end, center);
+    @media (max-width: 1040px) {
+      align-items: center;  
+      justify-items: center;  
+      gap: 2rem;
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
+    @media (min-width: 65em) {
+      grid-auto-flow: column;
+    }
+  } 
+  &--podcast {
+    @include mainFlex(0, column);
+  
+    .heading {
+      position: relative;
+      width: 100vw;
+      height: 80vh;
+      background-image: url(../../assets/Podcast.jpg);
+      background-size: cover;
+  
+      .description {
+        width : 80%;
+        @include position (relative, 70%);
+
+        @media (max-width: 1230px) {
+          top: 40%;
+        }
+        @media (max-width: 1000px) {
+          margin: 0 auto 0;
+          text-align: center;
+        }
+        @media(max-width: 600px) {
+          top: 15%;
+        }
+      }
+    }
+  }
+  &--contact {
+    @include mainFlex(0, row, clamp(.1rem, 5vw, 4rem));
+  
+    @media(max-width: 1120px) {
+      flex-direction: column;
+    }
+  }
+  &--team {
+    .heading {
+      position: relative;
+      width: 100vw;
+      height: 90vh;
+    }
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 72px; left: 0;
+      width: 100vw;
+      height: calc(100% + var(--nav-height));
+      background-image: url("../../assets/Poza echipa.jpg");
+      background-size: cover;
+      filter: blur(3px) brightness(60%);
+      z-index: -2;
+    }
+  }
+  &--sponsors {
+    @include flex(column);
+    @include margin(6rem, 0, 4rem)
+  }
+}
+
+.section {
+  @include grid(row, .6rem);
+  max-width: 95%;
+  height: auto;
+  @media (max-width: 65rem) {
+    max-width: 90%;
+  }
+
+  &--contact {
+    @include grid(row, .6rem);
+    max-width: 95%;
+    height: auto; 
+    padding-bottom: 2rem; 
+  }
+}
+
+.article {
+  @include flex();
+  // &--index {
+    
+  // }
+  &--contacts {
+    @include padding(2rem, 0, 2rem);
+    width: clamp(21rem, 60vw, 30rem);
+    height: auto;
+    @media (max-width:1120px) {
+      padding: 0;
+    }
+  }
+}

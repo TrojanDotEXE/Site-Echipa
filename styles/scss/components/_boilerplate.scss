@@ -1,0 +1,29 @@
+@import '../utils/index';
+
+:root {
+  --nav-height: 0;
+} 
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $black1;
+  color: $white1;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+a {
+  color: $white1;
+  text-decoration: none;
+}

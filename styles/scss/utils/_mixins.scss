@@ -1,0 +1,112 @@
+@import './fonts';
+
+@mixin title($min-size:2.5rem, $size:6vw, $max-size:4rem, $align:left, $font-weight:700) { //TODO clamp parameter
+  font-size: clamp($min-size, $size, $max-size);
+  font-family: $inter;
+  font-weight: $font-weight;
+
+  text-align: $align;
+  text-shadow: -3px 3px 0px;
+  text-transform: uppercase;
+  width: fit-content;
+
+  background-image: $gradient-main;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: text-shadow 250ms ease;
+
+  &:hover {
+    text-shadow: 0px 0px 0px;
+  }
+
+  @content;
+}
+@mixin title--simple($size:6vw, $align:left, $font-weight:700) {
+  @include title(2.5rem, $size, 4rem , $align, $font-weight);
+}
+@mixin description($min-size:1rem, $size:3vw, $max-size:1.5rem, $align:left, $font-weight:700) {
+  font-size: clamp($min-size, $size, $max-size);
+  font-family: $inter;
+  font-weight: $font-weight;
+  text-align: $align;
+  
+  text-transform: uppercase;
+  width: fit-content;
+
+  @content;
+}
+
+@mixin paragraph($min-size:.4rem, $size:1.5vw, $max-size:.8rem, $align:left, $font-weight:700) {
+  font-size: clamp($min-size, $size, $max-size);
+  font-family: $inter;
+  font-weight: $font-weight;
+  text-align: $align;
+  width: fit-content;
+
+  @content;
+}
+@mixin paragraph--max($size:1.5vw, $max-size:.8rem, $align:left, $font-weight:700) {
+  @include paragraph(.4rem, $size, $max-size, $align, $font-weight);
+}
+@mixin paragraph--min($min-size:.4rem, $size:1.5vw, $align:left, $font-weight:700) {
+  @include paragraph($min-size, $size, .8rem , $align, $font-weight);
+}
+@mixin paragraph--simple($size:1.5vw, $align:left, $font-weight:700) {
+  @include paragraph(.4rem, $size, .8rem , $align, $font-weight);
+}
+
+@mixin margin ($mg_top:0rem, $mg_lat:0rem, $mg_bot:0rem) {
+  margin: $mg_top $mg_lat $mg_bot;
+}
+@mixin margins ($mg_top:0rem, $mg_rgt:0rem, $mg_lft:0rem, $mg_bot:0rem) {
+  margin: $mg_top $mg_rgt $mg_bot $mg_lft;
+}
+
+@mixin padding ($pd_top:0rem, $pd_lat:0rem, $pd_bot:0rem) {
+  padding: $pd_top $pd_lat $pd_bot;
+}
+
+@mixin paddings ($pd_top:0rem, $pd_rgt:0rem, $pd_lft:0rem, $pd_bot:0rem) {
+  padding: $pd_top $pd_rgt $pd_bot $pd_lft;
+}
+
+@mixin flex ($flex-dir:row, $gap:0rem, $algn-i:center, $algn-c:center, $just-c:center) {
+  display: flex;
+  gap: $gap;
+  flex-direction: $flex-dir;
+  align-items: $algn-i;
+  align-content: $algn-c;
+  justify-content: $just-c;
+}
+
+@mixin grid ($grid-dir:row, $gap:0rem,
+$algn-i:center, $algn-c:center, 
+$just-i:center, $just-c:center) {
+  display: grid;
+  gap: $gap;
+  grid-auto-flow: $grid-dir;
+  align-items: $algn-i;
+  align-content: $algn-c;
+  justify-items: $just-i;
+  justify-content: $just-c;
+}
+
+@mixin gridX ($grid-dir:row, $gap:0rem,
+$algn-i:center, $algn-c:center, 
+$just-i:center, $just-c:center) {
+  display: grid;
+  gap: $gap;
+  grid-auto-flow: $grid-dir;
+  align-items: $algn-i;
+  align-content: $algn-c;
+  justify-items: $just-i;
+  justify-content: $just-c;
+}
+
+@mixin position ($pos:relative, $top:0, $right:0, $bot:0, $left:0) {
+  position: $pos;
+  top: $top;
+  right: $right;
+  bottom: $bot;
+  left: $left;
+}

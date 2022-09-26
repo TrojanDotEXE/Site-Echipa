@@ -1,0 +1,19 @@
+$black1:      hsl(0, 0%, 0%);
+$black2:      hsla(0, 0%, 0.2%, 0.85);
+$black3:      hsl(0, 0%, 2%);
+$white1:      hsl(0, 0%, 90%);
+$gray:        hsl(240, 7%, 51%);
+$gray2:       hsl(262, 13%, 16%);
+$secondary:   hsl(30, 100%, 50%);
+$secondary2:  hsla(30, 100%, 65%, 0.30);
+$secondary3:  hsl(30, 90%, 40%);
+
+$gradient-main: radial-gradient(circle at 30% 150%,
+#8A2387 0%, #8A2387 33%,
+#E94057 66%, #F27121 100%,
+);
+
+$gradient-main-reverse: radial-gradient(circle at 40% 150%,
+#F27121 0%,  #F27121 33%,
+#E94057 66%, #8A2387 100%,
+);

@@ -1,0 +1,10 @@
+.img-cover {
+  position: relative;
+  width: clamp(30vw, 70vw, 30rem);
+  height: auto;
+}
+
+.img-cover--motto {
+  width: inherit;
+  height: auto;
+}

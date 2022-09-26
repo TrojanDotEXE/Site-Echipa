@@ -1,25 +1,29 @@
-@import "config";
-@import "header";
-@import "main-main";
-@import "main-podcast";
-@import "main-contact";
-@import "main-sponsori";
-@import "main-echipa";
-@import "footer";
+@import './components/index';
 
-body {
-  background: $black1;
-  color: $white1;
-  min-height: 100vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1;
-  overflow-x: hidden;
+.invisible {
+  opacity: 0;
+
+  &--bg {
+    background-color: transparent!important;
+  }
+
+  &--color {
+    color: transparent!important;
+  }
+
+  &--shadow {
+    box-shadow: none!important;
+  }
 }
 
-.link {
-  padding: .4rem;
-  &:hover {
-    color: $secondary;
+.cursor-- {
+
+  &default, &default:hover {
+    cursor: default!important;
+  }
+
+  &pointer, &pointer:hover {
+    cursor: pointer!important;
   }
 }
 
