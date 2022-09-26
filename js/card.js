@@ -32,3 +32,4 @@ cardElements.forEach(card => {
         }, 170);
     });
 });
+//ok
